@@ -5,23 +5,11 @@ import com.foxminded.charCounter.Model.StringsAndTheirCharacters;
 
 import java.util.LinkedHashMap;
 
-public class CharCounter {
+public class SimpleCounter implements CharCounterInt {
 
-    StringsAndTheirCharacters dataBase = new StringsAndTheirCharacters();
+    @Override
+    public CollectionOfUniqueCharacters countCharsInString(String string) {
 
-
-    public CollectionOfUniqueCharacters returnSetOfCharacters(String string) {
-
-        if (dataBase.containsKey(string)) {
-            return dataBase.get(string);
-        }
-        CollectionOfUniqueCharacters setOfChars = countCharsInString(string);
-
-        dataBase.put(string, setOfChars);
-
-        return setOfChars;
-    }
-    private CollectionOfUniqueCharacters countCharsInString(String string) {
         char[] array = string.toCharArray();
         LinkedHashMap<Character, Integer> result = new LinkedHashMap<>();
 

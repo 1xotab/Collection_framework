@@ -6,17 +6,18 @@ import java.util.Map;
 import java.util.Objects;
 
 public class CollectionOfUniqueCharacters {
-    LinkedHashMap <Character, Integer> charactersAndTheirQuantity;
+    LinkedHashMap<Character, Integer> charactersAndTheirQuantity;
 
     public CollectionOfUniqueCharacters(LinkedHashMap<Character, Integer> charactersAndTheirQuantity) {
         this.charactersAndTheirQuantity = charactersAndTheirQuantity;
     }
+
     @Override
     public String toString() {
-        Iterator <Map.Entry<Character, Integer>> i = charactersAndTheirQuantity.entrySet().iterator();
-        if (!i.hasNext())
+        Iterator<Map.Entry<Character, Integer>> i = charactersAndTheirQuantity.entrySet().iterator();
+        if (!i.hasNext()) {
             return "{}";
-
+        }
         StringBuilder sb = new StringBuilder();
         sb.append("\n");
         for (; ; ) {
@@ -35,8 +36,12 @@ public class CollectionOfUniqueCharacters {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         CollectionOfUniqueCharacters collectionOfUniqueCharacters = (CollectionOfUniqueCharacters) o;
         return Objects.equals(charactersAndTheirQuantity, collectionOfUniqueCharacters.charactersAndTheirQuantity);
     }
@@ -46,3 +51,4 @@ public class CollectionOfUniqueCharacters {
         return Objects.hash(charactersAndTheirQuantity);
     }
 }
+

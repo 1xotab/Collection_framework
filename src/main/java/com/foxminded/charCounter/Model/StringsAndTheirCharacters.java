@@ -19,11 +19,5 @@ public class StringsAndTheirCharacters {
     public void put(String string, CollectionOfUniqueCharacters collectionOfUniqueCharacters) {
         stringAndItsCharacters.put(string, collectionOfUniqueCharacters);
     }
-
-    @Override
-    public String toString() {
-        return "\n"+"StringsAndTheirCharacters{" +
-                "stringAndItsCharacters=" + stringAndItsCharacters +
-                '}';
-    }
 }
+
