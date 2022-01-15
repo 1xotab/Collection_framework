@@ -8,9 +8,9 @@ import com.foxminded.charCounter.calculator.SimpleCounter;
 
 public class Application {
     public static void main(String[] args) {
-        String string1 = "hello world!";
-        String string2 = "sosiska";
-        String string3 = "polka";
+        String string1 = "";
+        String string2 = "";
+        String string3 = "";
 
         CounterWithCash counter = new CounterWithCash();
         StringsCharsFormatter formatter = new StringsCharsFormatter();
